@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FinCat — Planeje com inteligência, viva com liberdade</title>
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="sections.css" />
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#">
+      <div class="logo-mark">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a1200" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4c1.5 2 3 3 6 3s4.5-1 6-3c1 2 2 4 2 7 0 4.5-3.5 8-8 8s-8-3.5-8-8c0-3 1-5 2-7z"/>
+          <circle cx="9" cy="12" r="1" fill="#1a1200"/>
+          <circle cx="15" cy="12" r="1" fill="#1a1200"/>
+        </svg>
+      </div>
+      FinCat
+    </a>
+    <div class="nav-links">
+      <a href="#proj">Projeção</a>
+      <a href="#daily">Gasto diário</a>
+      <a href="#whats">WhatsApp</a>
+      <a href="#pricing">Preços</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="#">Entrar</a>
+      <a class="btn btn-primary" href="#cta">Começar grátis</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-deco deco-blob"></div>
+
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-badges">
+        <span class="chip chip-yellow">🐾 Novo · WhatsApp bot</span>
+        <span class="chip">🇧🇷 Feito no Brasil</span>
+      </div>
+
+      <h1 class="h-display">
+        Veja o <span class="highlight-yellow">futuro</span><br/>
+        das suas<br/>
+        finanças.
+      </h1>
+
+      <p class="lead mt-6" style="max-width: 520px;">
+        O FinCat projeta como você vai fechar o mês <b style="color:var(--fg)">antes dele acabar</b> — e te diz quanto pode gastar hoje sem sair do plano.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#cta" class="btn btn-primary btn-lg">
+          Começar grátis
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#proj" class="btn btn-ghost btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor"/></svg>
+          Ver demo
+        </a>
+      </div>
+
+      <div class="hero-trust">
+        <span><span class="check">✓</span> Sem cartão</span>
+        <span><span class="check">✓</span> Configura em 5 min</span>
+        <span><span class="check">✓</span> iOS, Android e Web</span>
+      </div>
+    </div>
+
+    <div class="phone-wrap">
+      <!-- floating projection -->
+      <div class="float-card float-projection">
+        <div style="font-size:11px;color:var(--muted-fg);font-weight:500;text-transform:uppercase;letter-spacing:.05em;">Projeção fim do mês</div>
+        <div style="font-size:20px;font-weight:700;letter-spacing:-0.02em;color:#069966;margin-top:4px;">+<span id="proj-value">742</span>,<span id="proj-cents">18</span></div>
+        <svg class="mini-chart" viewBox="0 0 180 44" preserveAspectRatio="none">
+          <path id="mini-path" d="M0,36 L30,32 L60,30 L90,22 L120,18 L150,12 L180,6" stroke="#4ad9a2" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <circle id="mini-dot" cx="180" cy="6" r="4" fill="#4ad9a2"/>
+        </svg>
+      </div>
+
+      <!-- floating daily -->
+      <div class="float-card float-daily">
+        <div style="font-size:11px;opacity:.65;font-weight:500;">Hoje você pode gastar</div>
+        <div style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-top:2px;">R$ <span id="daily-float">68</span></div>
+      </div>
+
+      <!-- floating whatsapp -->
+      <div class="float-card float-whats">
+        <div class="whats-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3 4.8 4.2 1.6.7 2.3.8 3.1.7.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.2-.1-.4-.1-.6-.2z M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.3A10 10 0 1012 2z"/></svg>
+        </div>
+        <div style="flex:1;">
+          <div style="font-weight:600;font-size:13px;">Gasto registrado ✓</div>
+          <div style="color:var(--muted-fg);font-size:12px;margin-top:2px;">Almoço · R$ 32,90</div>
+        </div>
+      </div>
+
+      <!-- phone -->
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="dash">
+            <div class="dash-topbar">
+              <div>
+                <div class="dash-greet">Oi, Ana 👋</div>
+                <div class="dash-name">Abril · 2026</div>
+              </div>
+              <div class="dash-avatar">A</div>
+            </div>
+
+            <div class="dash-saldo-card">
+              <div class="dash-saldo-label">Saldo disponível</div>
+              <div class="dash-saldo-value mono">R$ <span id="saldo-val">4.218</span></div>
+              <div class="dash-saldo-row">
+                <div class="item"><div class="lbl">Entrou</div><div class="val up mono">+R$ 6.200</div></div>
+                <div class="item"><div class="lbl">Saiu</div><div class="val down mono">−R$ 1.982</div></div>
+              </div>
+            </div>
+
+            <div class="dash-daily">
+              <div class="dash-daily-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a1200" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div>
+                <div class="dash-daily-lbl">Hoje você pode gastar</div>
+                <div class="dash-daily-val mono">R$ <span id="daily-val">68</span>,<span id="daily-cents">40</span></div>
+              </div>
+              <div class="dash-daily-pill">21 dias</div>
+            </div>
+
+            <div class="dash-section-title">Últimos lançamentos</div>
+
+            <div class="dash-tx">
+              <div class="dash-tx-icon" style="background:#fff4c4;">🍔</div>
+              <div>
+                <div class="dash-tx-title">Almoço</div>
+                <div class="dash-tx-sub">Alimentação · via WhatsApp</div>
+              </div>
+              <div class="dash-tx-amt neg mono">−32,90</div>
+            </div>
+            <div class="dash-tx">
+              <div class="dash-tx-icon" style="background:#d9f7ea;">🏠</div>
+              <div>
+                <div class="dash-tx-title">Aluguel</div>
+                <div class="dash-tx-sub">Moradia · Fixo mensal</div>
+              </div>
+              <div class="dash-tx-amt neg mono">−1.450,00</div>
+            </div>
+            <div class="dash-tx">
+              <div class="dash-tx-icon" style="background:#e0f0ff;">💼</div>
+              <div>
+                <div class="dash-tx-title">Salário</div>
+                <div class="dash-tx-sub">Receita · 5 abr</div>
+              </div>
+              <div class="dash-tx-amt pos mono">+6.200,00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- logo strip -->
+  <div class="wrap logo-strip">
+    <div class="logo-strip-label">Funciona onde você está</div>
+    <div class="logos">
+      <span>  App Store</span>
+      <span>▶ Google Play</span>
+      <span>🌐 Navegador</span>
+      <span>💬 WhatsApp</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== SECTION: PROJEÇÃO ========== -->
+<section class="section-dark" id="proj">
+  <div class="wrap">
+    <div class="proj-grid">
+      <div>
+        <div class="eyebrow" style="color:rgba(255,255,255,.6);"><span class="dot"></span> Projeção inteligente</div>
+        <h2 class="proj-headline mt-6">
+          Chegue no dia&nbsp;1º<br/>
+          sabendo do <em>dia&nbsp;30</em>.
+        </h2>
+        <p class="lead mt-6" style="max-width:460px;">
+          O FinCat cruza seus <b style="color:#fff;">fixos</b>, seus <b style="color:#fff;">gastos diários</b> e seu <b style="color:#fff;">saldo atual</b> pra projetar como o mês vai fechar. Ajusta sozinho, todo dia.
+        </p>
+        <div class="mt-8" style="display:flex;gap:12px;flex-wrap:wrap;">
+          <span class="chip" style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.85);">· Recalcula em tempo real</span>
+          <span class="chip" style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.85);">· Sem planilha</span>
+        </div>
+      </div>
+
+      <div class="proj-vis">
+        <div class="proj-vis-header">
+          <div>
+            <div class="proj-vis-title">Saldo projetado — Abril</div>
+            <div class="proj-vis-sub">Atualizado hoje, 14:32</div>
+          </div>
+          <div class="proj-vis-month">21 → 30 abr</div>
+        </div>
+
+        <svg class="proj-chart" id="proj-chart" viewBox="0 0 520 260" preserveAspectRatio="none">
+          <!-- grid -->
+          <g stroke="rgba(255,255,255,0.06)" stroke-width="1">
+            <line x1="0" y1="52" x2="520" y2="52"/>
+            <line x1="0" y1="104" x2="520" y2="104"/>
+            <line x1="0" y1="156" x2="520" y2="156"/>
+            <line x1="0" y1="208" x2="520" y2="208"/>
+          </g>
+          <!-- historical area -->
+          <path id="hist-area" d="" fill="url(#g-hist)" opacity="0.35"/>
+          <path id="hist-line" d="" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- projection area -->
+          <path id="proj-area" d="" fill="url(#g-proj)" opacity="0.45"/>
+          <path id="proj-line" d="" stroke="#ffce2d" stroke-width="2.5" fill="none" stroke-dasharray="6 5" stroke-linecap="round"/>
+          <!-- end marker -->
+          <circle id="proj-end" cx="0" cy="0" r="6" fill="#ffce2d"/>
+          <circle id="proj-end-ring" cx="0" cy="0" r="12" fill="none" stroke="#ffce2d" stroke-width="2" opacity="0.3"/>
+          <!-- today line -->
+          <line id="today-line" x1="0" y1="20" x2="0" y2="240" stroke="rgba(255,255,255,0.3)" stroke-dasharray="3 4"/>
+          <text id="today-label" x="0" y="18" fill="rgba(255,255,255,0.6)" font-size="10" font-family="Poppins" text-anchor="middle">hoje</text>
+
+          <defs>
+            <linearGradient id="g-hist" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="g-proj" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%" stop-color="#ffce2d" stop-opacity="0.5"/>
+              <stop offset="100%" stop-color="#ffce2d" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <div class="proj-legend">
+          <div><span class="dot" style="background:#fff;"></span>Real (1–21 abr)</div>
+          <div><span class="dot" style="background:#ffce2d;"></span>Projeção</div>
+        </div>
+
+        <div class="proj-pill">
+          <div class="proj-pill-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>Você deve fechar abril com <b>+R$&nbsp;742,18</b> sobrando — <b>dentro</b> da sua meta.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== SECTION: DAILY (interactive) ========== -->
+<section id="daily">
+  <div class="wrap">
+    <div class="daily-sim">
+      <div class="daily-grid">
+        <div>
+          <div class="eyebrow"><span class="dot" style="background:#1a1200;"></span> Gasto diário recomendado</div>
+          <h2 class="h-section mt-6">
+            "Posso gastar<br/>
+            nisso hoje?"<br/>
+            <span style="color:#6b4e00;">A gente responde.</span>
+          </h2>
+          <p class="lead mt-6" style="max-width:440px;">
+            Defina quanto quer economizar no mês. O FinCat recalcula seu limite diário em tempo real — um número, simples, que cabe na sua cabeça.
+          </p>
+
+          <div class="mt-8" style="display:flex;gap:20px;flex-wrap:wrap;color:#1a1200;">
+            <div>
+              <div style="font-size:32px;font-weight:700;letter-spacing:-0.02em;">21</div>
+              <div style="font-size:12px;color:rgba(26,18,0,.65);font-weight:500;">dias restantes</div>
+            </div>
+            <div style="width:1px;background:rgba(26,18,0,.15);"></div>
+            <div>
+              <div style="font-size:32px;font-weight:700;letter-spacing:-0.02em;">3.840</div>
+              <div style="font-size:12px;color:rgba(26,18,0,.65);font-weight:500;">saldo disponível</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <div class="sim-q">Simule aqui · experimente →</div>
+          <div class="sim-amount mono"><small>R$</small><span id="sim-amount">182</span>,<span id="sim-amount-cents">85</span></div>
+          <div class="sim-status ok" id="sim-status">✓ Dentro do plano · dá pra guardar</div>
+
+          <div class="sim-bar">
+            <div class="sim-bar-track"><div class="sim-bar-fill" id="sim-fill" style="width:45%"></div></div>
+            <div class="sim-bar-labels"><span>R$ 0</span><span id="sim-bar-max">R$ 250 / dia</span></div>
+          </div>
+
+          <div class="sim-controls">
+            <div class="sim-control">
+              <div class="sim-control-head">
+                <span>Meta de economia no mês</span>
+                <b class="mono">R$ <span id="sim-meta-val">500</span></b>
+              </div>
+              <input type="range" min="0" max="2000" value="500" step="50" class="sim-slider" id="sim-meta"/>
+            </div>
+            <div class="sim-control">
+              <div class="sim-control-head">
+                <span>Fixos já comprometidos no mês</span>
+                <b class="mono">R$ <span id="sim-fix-val">2.200</span></b>
+              </div>
+              <input type="range" min="0" max="4000" value="2200" step="100" class="sim-slider" id="sim-fix"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== SECTION: WHATSAPP ========== -->
+<section id="whats" style="background: var(--off-white);">
+  <div class="wrap">
+    <div class="whats-grid">
+      <div class="chat-frame" id="chat-frame">
+        <div class="chat-header-name">FinCat Bot</div>
+        <div class="chat-header-sub">online</div>
+        <div id="chat-body" style="min-height: 340px;"></div>
+      </div>
+
+      <div>
+        <div class="eyebrow"><span class="dot"></span> WhatsApp</div>
+        <h2 class="h-section mt-6">
+          Lançou no almoço.<br/>
+          <span class="highlight-yellow">Registrou</span> sem abrir o app.
+        </h2>
+        <p class="lead mt-6" style="max-width:480px;">
+          Mande uma mensagem pro bot do FinCat no WhatsApp. Ele entende, categoriza e registra — do jeito que você já usa o celular.
+        </p>
+        <ul class="mt-8" style="list-style:none;display:grid;gap:14px;font-size:15px;">
+          <li style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="width:24px;height:24px;border-radius:8px;background:var(--primary);display:grid;place-items:center;flex-shrink:0;font-weight:700;font-size:13px;color:#1a1200;">1</span>
+            Digita "almoço 32,90" — ou só manda o valor.
+          </li>
+          <li style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="width:24px;height:24px;border-radius:8px;background:var(--primary);display:grid;place-items:center;flex-shrink:0;font-weight:700;font-size:13px;color:#1a1200;">2</span>
+            O bot detecta a categoria sozinho.
+          </li>
+          <li style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="width:24px;height:24px;border-radius:8px;background:var(--primary);display:grid;place-items:center;flex-shrink:0;font-weight:700;font-size:13px;color:#1a1200;">3</span>
+            Aparece no app em 2 segundos. Pronto.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== SECTION: FEATURES GRID ========== -->
+<section>
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow" style="justify-content:center;"><span class="dot"></span> Tudo que você precisa</div>
+      <h2 class="h-section mt-6">Controle que cabe no bolso —<br/>e entende o seu ritmo.</h2>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </div>
+        <h3>Gastos fixos no piloto</h3>
+        <p>Aluguel, Netflix, academia. Cadastra uma vez e o FinCat lança todo mês — semanal, mensal ou anual.</p>
+      </div>
+
+      <div class="feature feature-yellow">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 10h20M6 14h4"/></svg>
+        </div>
+        <h3>Cartões sob controle</h3>
+        <p>Fatura em tempo real. Fechamento, vencimento e limite organizados pra você nunca ser pego de surpresa.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        </div>
+        <h3>Metas com progresso</h3>
+        <p>Viagem, reserva, troca de carro. Separe um % das entradas automaticamente e acompanhe o avanço visual.</p>
+      </div>
+
+      <div class="feature feature-accent">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Finanças em família</h3>
+        <p>Carteira compartilhada entre casal ou família. Mesmos lançamentos, em tempo real. Acabou a discussão de "quem gastou o quê".</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 6-6"/></svg>
+        </div>
+        <h3>Categorias do seu jeito</h3>
+        <p>Alimentação, Pet, Delivery, Lazer — com cor e ícone. Veja no gráfico onde você gastou mais esse mês.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+        </div>
+        <h3>Uma tela, tudo à vista</h3>
+        <p>Entrada, saída, sobra e meta de economia num olhar só. Sem navegar por mil menus pra entender o mês.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== SECTION: TESTIMONIALS ========== -->
+<section style="background: var(--off-white);">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow" style="justify-content:center;"><span class="dot"></span> Quem usa, economiza</div>
+      <h2 class="h-section mt-6">Gente de verdade.<br/>Conta no azul.</h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">Depois de 3 planilhas abandonadas, o FinCat foi o único que grudou. Lanço pelo WhatsApp no Uber, no caixa, no bar. Chegou o fim do mês e pela primeira vez em anos sobrou dinheiro.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👩🏽</div>
+          <div>
+            <div class="testi-name">Marina Teixeira</div>
+            <div class="testi-role">Designer · São Paulo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">A projeção de fim de mês é cirúrgica. Vi dia 12 que ia fechar R$ 300 no vermelho, cortei dois deliveries e ajustei. Fechei no azul. Parece mágica mas é só conta bem feita.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">🧑🏻</div>
+          <div>
+            <div class="testi-name">Rafael Andrade</div>
+            <div class="testi-role">Analista de TI · Curitiba</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">Usamos em casal na carteira compartilhada. Acabaram as DRs de "quem pagou o quê". A gente vê o mesmo saldo, as mesmas metas. Só isso já valeu o ano inteiro.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👩🏼</div>
+          <div>
+            <div class="testi-name">Juliana & Pedro</div>
+            <div class="testi-role">Casal · Belo Horizonte</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== SECTION: PRICING ========== -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow" style="justify-content:center;"><span class="dot"></span> Preços</div>
+      <h2 class="h-section mt-6">Comece grátis.<br/>Cresça quando fizer sentido.</h2>
+      <p class="lead mt-6" style="max-width:520px;margin-left:auto;margin-right:auto;">Sem cartão pra começar. Sem pegadinha. Cancele quando quiser.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-name">Free</div>
+        <div class="price-value">
+          <div class="num mono">R$0</div>
+          <div class="unit">/ para sempre</div>
+        </div>
+        <div class="price-sub">Pra organizar o mês sem dor</div>
+        <div class="price-features">
+          <div class="price-feature"><span class="price-feature-check">✓</span>Uma carteira pessoal</div>
+          <div class="price-feature"><span class="price-feature-check">✓</span>Lançamentos ilimitados no app</div>
+          <div class="price-feature"><span class="price-feature-check">✓</span>Categorias customizáveis</div>
+          <div class="price-feature"><span class="price-feature-check">✓</span>Até 2 metas ativas</div>
+          <div class="price-feature"><span class="price-feature-check">✓</span>Dashboard mensal</div>
+        </div>
+        <a href="#cta" class="btn btn-dark btn-lg" style="width:100%;">Criar conta grátis</a>
+      </div>
+
+      <div class="price-card featured">
+        <div class="price-badge">Mais popular</div>
+        <div class="price-name" style="color:var(--primary);">Pro</div>
+        <div class="price-value">
+          <div class="num mono">R$14,90</div>
+          <div class="unit">/ mês</div>
+        </div>
+        <div class="price-sub">Tudo do Free, mais superpoderes</div>
+        <div class="price-features">
+          <div class="price-feature"><span class="price-feature-check">✓</span><b>Projeção de fim do mês</b> + próximos meses</div>
+          <div class="price-feature"><span class="price-feature-check">✓</span><b>Gasto diário recomendado</b> em tempo real</div>
+          <div class="price-feature"><span class="price-feature-check">✓</span><b>Lançamento pelo WhatsApp</b></div>
+          <div class="price-feature"><span class="price-feature-check">✓</span>Carteiras compartilhadas (família / casal)</div>
+          <div class="price-feature"><span class="price-feature-check">✓</span>Cartões de crédito ilimitados</div>
+          <div class="price-feature"><span class="price-feature-check">✓</span>Metas e automação de reserva</div>
+        </div>
+        <a href="#cta" class="btn btn-primary btn-lg" style="width:100%;">Testar Pro grátis por 14 dias</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== SECTION: FAQ ========== -->
+<section id="faq" style="background: var(--off-white);">
+  <div class="wrap-narrow">
+    <div class="center">
+      <div class="eyebrow" style="justify-content:center;"><span class="dot"></span> Perguntas frequentes</div>
+      <h2 class="h-section mt-6">Antes de criar<br/>a conta.</h2>
+    </div>
+
+    <div class="faq-list" id="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q">Preciso colocar cartão de crédito pra criar conta?
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">Não. A conta Free é gratuita pra sempre, sem cartão e sem período de teste. Você só coloca cartão se decidir migrar pro Pro.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">O FinCat acessa minha conta do banco?
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">Não. O FinCat não se conecta ao seu banco — é um diário financeiro inteligente. Você registra seus lançamentos (pelo app ou pelo WhatsApp) e o app cuida do resto. Isso significa zero risco de exposição de senhas bancárias.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Como a projeção de fim de mês funciona?
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">O FinCat olha 3 coisas: seu saldo atual, seus compromissos fixos já cadastrados (aluguel, assinaturas, etc) e o seu padrão de gasto diário nos últimos dias. A partir disso, projeta como seu saldo deve evoluir até o fim do mês. A cada novo lançamento, recalcula.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">O lançamento pelo WhatsApp é seguro?
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">Sim. O bot é pareado com sua conta na primeira interação e só aceita mensagens do seu número. Os dados ficam criptografados em trânsito e em repouso, no mesmo cofre da sua carteira principal.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Posso usar com minha parceira / família?
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">Pode. No plano Pro, você cria carteiras compartilhadas e convida outras pessoas. Cada um mantém sua carteira pessoal e compartilham uma terceira (do casal, da casa, da família). Todo mundo vê os mesmos lançamentos em tempo real.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Funciona em iPhone e Android?
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">Funciona nos dois, com app nativo. Também tem versão web (acessa de qualquer navegador) e, claro, o bot do WhatsApp. Seus dados sincronizam entre todas as plataformas automaticamente.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Consigo cancelar o Pro quando quiser?
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">Sim, com dois toques nas configurações. Você volta pro Free mantendo todo o histórico. Nada é deletado, nada trava.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== FINAL CTA ========== -->
+<section id="cta" style="padding-top: 48px; padding-bottom: 0;">
+  <div class="final-cta">
+    <div class="final-cta-deco left">🐾</div>
+    <div class="final-cta-deco right">R$</div>
+    <h2>A melhor decisão financeira<br/>é a que você toma <i style="font-style:normal;border-bottom:4px solid #1a1200;">antes</i> de gastar.</h2>
+    <p>Criar conta leva menos de 5 minutos. Sem cartão. Sem compromisso.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a class="btn btn-dark btn-lg" href="#">
+        Começar agora, grátis
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <div class="row" style="gap:10px;">
+      <div class="logo-mark" style="width:28px;height:28px;border-radius:8px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1a1200" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4c1.5 2 3 3 6 3s4.5-1 6-3c1 2 2 4 2 7 0 4.5-3.5 8-8 8s-8-3.5-8-8c0-3 1-5 2-7z"/></svg>
+      </div>
+      <span>© 2026 FinCat · Feito com 🐱 no Brasil</span>
+    </div>
+    <div class="foot-links">
+      <a href="#">Termos</a>
+      <a href="#">Privacidade</a>
+      <a href="#">Contato</a>
+    </div>
+  </div>
+</footer>
+
+<script src="animate.js"></script>
+</body>
+</html>
